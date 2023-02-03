@@ -1,3 +1,3 @@
 # Insertion-Bias
 
-Result and Data re;ated to insertion bias.
+Result and Data related to insertion bias.
