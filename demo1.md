@@ -47,7 +47,11 @@ A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
       plot(gl)
 
 
-![](images/demo1a.png)<!-- -->
+<figure>
+    <img src="images/demo1a.png" width="200" height="100">
+         alt="TE copies in the population vs Gen">
+    <figcaption>In this scenario estimated the expected TE copies in the population.</figcaption>
+</figure>
 
 
 
