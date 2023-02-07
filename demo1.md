@@ -46,18 +46,21 @@ A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
       gl<-ggplot()+geom_line(data=validation,aes(x=gen,group=rep,y=avtes*1000),alpha=0.15,size=0.3)+scale_y_log10()+geom_line(data=theo,aes(x=x,y=y),size=2)+theme(legend.position="none")+ylab("TE copies in the population")+xlab("generation")
       plot(gl)
 
+
+<p align="center">
 <p align="left">
     <img src="images/demo1a.png" width="400" height="400"
          alt="TE copies in the population vs Gen">
-    <figcaption>In this scenario estimated the expected \
+    <figcaption>In this scenario estimated the expected
           TE copies in the population.</figcaption>
 </p>
 
 <p align="right">
     <img src="images/demo1b.png" width="400" height="400"
          alt="TEs insertions per diploid individual">
-    <figcaption>Similar to the previous case but in this scenario \
+    <figcaption>Similar to the previous case but in this scenario
           estimated the expected TE copies per diploid individual.</figcaption>
+</p>
 </p>
 
     library(ggplot2)
