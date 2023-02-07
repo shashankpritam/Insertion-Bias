@@ -47,7 +47,7 @@ A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
       plot(gl)
 
 
-![](images/demo1a.png=250x250))<!-- -->
+![](images/demo1a.png =250x250)<!-- -->
 
 
 
