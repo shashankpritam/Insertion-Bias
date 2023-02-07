@@ -8,7 +8,7 @@ With this validation we wanted to prove that the simulator will generate
 on average the number of insertions predicted by the equation:
 
 c<sub>t</sub> = c<sub>0</sub>(1+$\mu$)<sup>t</sup>
-
+[\\mu]
 c<sub>t</sub> = TE copies at generation t
 
 c<sub>0</sub> = TE copies at generation 0
@@ -43,6 +43,11 @@ A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
     
       gl<-ggplot()+geom_line(data=validation,aes(x=gen,group=rep,y=avtes*1000),alpha=0.15,size=0.3)+scale_y_log10()+geom_line(data=theo,aes(x=x,y=y),size=2)+theme(legend.position="none")+ylab("TE copies in the population")+xlab("generation")
       plot(gl)
+
+
+![](images/demo1a)<!-- -->
+
+
 
   
   
