@@ -1,8 +1,14 @@
-Validation of invasion demo
-[From](https://github.com/Almo96/Paramutations_TEs/blob/main/Validation/2022_08_01_Validation_1_invasion.md)
+Validation of invasion
+================
+Almorò Scarpa (Edited by Shashank [from](https://github.com/Almo96/Paramutations_TEs/blob/main/Validation/2022_08_01_Validation_1_invasion.md))
 
-Introduction
-With this validation we wanted to prove that the simulator will generate on average the number of insertions predicted by the equation:
+## Introduction
+
+With this validation we wanted to prove that the simulator will generate
+on average the number of insertions predicted by the equation:
+
+<sup>superscript</sup> content example.
+<sub>subscript</sub> content example.
 
 c_{t}=c_{0}(1+\mu)^t
 
