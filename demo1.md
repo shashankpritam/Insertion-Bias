@@ -51,6 +51,7 @@ A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
     <img src="images/demo1a.png" width="400" height="400"
          alt="TE copies in the population vs Gen">
     <figcaption>In this scenario estimated the expected TE copies in the population.</figcaption>
+      &nbsp; &nbsp; &nbsp; &nbsp;
     <img src="images/demo1b.png" width="400" height="400"
          alt="TEs insertions per diploid individual">
     <figcaption>Similar to the previous case but in this scenario estimated the expected TE copies per diploid individual.</figcaption>
