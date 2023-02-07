@@ -8,7 +8,9 @@ With this validation we wanted to prove that the simulator will generate
 on average the number of insertions predicted by the equation:
 
 c<sub>t</sub> = c<sub>0</sub>(1+$\mu$)<sup>t</sup>
+
 [\\mu]
+
 c<sub>t</sub> = TE copies at generation t
 
 c<sub>0</sub> = TE copies at generation 0
@@ -45,7 +47,7 @@ A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
       plot(gl)
 
 
-![](images/demo1a)<!-- -->
+![Image](images/demo1a)<!-- -->
 
 
 
