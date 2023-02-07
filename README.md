@@ -2,8 +2,8 @@
 
 Result and Data related to Invadego validation and simulation.
 
-> Invadego, Version - 0.1.3 
-> Module - Insertion Bias 
+> Invadego, Version - 0.1.3
+> Module - Insertion Bias.
 > R, Version 4.2.1
 > 
 System Info -  
