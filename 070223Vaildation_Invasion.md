@@ -1,6 +1,6 @@
 Validation of invasion
 ================
-Shashank. File edited [from](https://github.com/Almo96/Paramutations_TEs/blob/main/Validation/2022_08_01_Validation_1_invasion.md))
+Almo & Shashank. File edited [from](https://github.com/Almo96/Paramutations_TEs/blob/main/Validation/2022_08_01_Validation_1_invasion.md)
 
 ## Introduction
 
