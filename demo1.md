@@ -10,7 +10,11 @@ on average the number of insertions predicted by the equation:
 <sup>superscript</sup> content example.
 <sub>subscript</sub> content example.
 
+E=mc<sup>2</sup>
+co<sub>2</sub>
+
 c_{t}=c_{0}(1+\mu)^t
+c<sub>t</sub> = c<sub>0</sub>((1+$\mu$)^t)
 
 c_{t} TE copies at generation t
 
