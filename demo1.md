@@ -15,23 +15,24 @@ co<sub>2</sub>
 
 c_{t}=c_{0}(1+\mu)^t
 
-c<sub>t</sub> = c<sub>0</sub>(1+$ \mu $)<sup>t</sup>
+c<sub>t</sub> = c<sub>0</sub>(1+$\mu$ )<sup>t</sup>
 
 c<sub>t</sub> TE copies at generation t
 
 c<sub>0</sub> TE copies at generation 0
 
-$ \mu $ Transposition rate
+$\mu$  Transposition rate
 
 t Generation
 
 Initial conditions:
 c<sub>0</sub>=10
 
-$ \mu $  = 0.1
+$\mu$  = 0.1
 
 t=100.
 
+$\mu^{null}$
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
 
