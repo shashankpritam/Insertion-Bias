@@ -7,9 +7,9 @@ Almorò Scarpa (Edited by Shashank [from](https://github.com/Almo96/Paramutation
 With this validation we wanted to prove that the simulator will generate
 on average the number of insertions predicted by the equation:
 
-c<sub>t</sub> = c<sub>0</sub>(1+$\mu$)<sup>t</sup>
+c<sub>t</sub> = c<sub>0</sub>(1+ $\mu$ )<sup>t</sup>
 
-[\\mu]
+
 
 c<sub>t</sub> = TE copies at generation t
 
