@@ -14,3 +14,5 @@ gl<-ggplot()+geom_line(data=validation,aes(x=gen,group=rep,y=avtes*1000),alpha=0
 plot(gl)
 
 
+gl<-ggplot()+geom_line(data=validation,aes(x=gen,group=rep,y=avtes),alpha=0.15,size=0.3)+scale_y_log10()+geom_line(data=theo,aes(x=x,y=y),size=2)+theme(legend.position="none")+ylab("TEs insertions per diploid individual")+xlab("generation")
+plot(gl)
