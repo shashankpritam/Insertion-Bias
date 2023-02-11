@@ -1,6 +1,6 @@
 Validation of drift
 ================
-Almorò Scarpa
+Almorò Scarpa (Edited by Shashank Pritam)
 
 ## Introduction
 
@@ -11,25 +11,25 @@ To test if drift is simulated correctly we exploit a basic population
 genetic insight: the probability of fixation of a neutral singleton in a
 diploid organism is:
 
-![P(fix)=\\frac{1}{2Ne}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;P%28fix%29%3D%5Cfrac%7B1%7D%7B2Ne%7D "P(fix)=\frac{1}{2Ne}")
+$$ P(fix) = \frac{1}{2Ne}$$
 
 For different population sizes we thus expect the following number of
 fixed loci:
 
 -   for N=250 we expect 20 fixed loci, by substituting in the previous
     equation:
-
-![\\frac{10000}{2 \\cdot 250} = 20](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B10000%7D%7B2%20%5Ccdot%20250%7D%20%3D%2020 "\frac{10000}{2 \cdot 250} = 20")
+    
+$$\frac{10000}{2 * 250} = 20$$
 
 -   for N=500 we expect 10 fixed loci, by substituting in the previous
     equation:
 
-![\\frac{10000}{2 \\cdot 500} = 10](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B10000%7D%7B2%20%5Ccdot%20500%7D%20%3D%2010 "\frac{10000}{2 \cdot 500} = 10")
+$$\frac{10000}{2 * 500} = 10$$
 
 -   for N=1000 we expect 5 fixed loci, by substituting in the previous
     equation:
 
-![\\frac{10000}{2 \\cdot 1000} = 5](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cfrac%7B10000%7D%7B2%20%5Ccdot%201000%7D%20%3D%205 "\frac{10000}{2 \cdot 1000} = 5")
+$$\frac{10000}{2 * 1000} = 5$$
 
 To test if our simulations reproduce this fundamental property we
 randomly distributed 10000 neutral TE insertions that do NOT transpose
