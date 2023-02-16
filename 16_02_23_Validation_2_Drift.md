@@ -107,7 +107,7 @@ gl_3<-ggplot(data_3,aes(x=fixed))+
 gl_1+gl_2+gl_3
 ```
 <p align="center">
-<img src="iimages/2023-02-16-validation2_drift.png" width="400" height="400" alt="Fixed vs. Count">
+<img src="images/2023-02-16-validation2_drift.png" width="400" height="400" alt="Fixed vs. Count">
 </p>
 
 
