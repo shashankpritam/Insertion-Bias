@@ -57,8 +57,8 @@ version: invadego0.2.1
 ### Commands for the simulation:
 
 ``` bash
-folder="/Users/ascarpa/Paramutations_TEs/Validation/Raw"
-tool="/Users/ascarpa/invade-invadego/invadego021"
+tool="./main"
+folder="Simulation-Results/Insertion-Bias/validation_2"
 
 $tool --N 250 --gen 20000 --genome mb:10,10,10,10,10 --cluster mb:1,1,1,1,1 --rr 4,4,4,4,4 --rep 300 --u 0.0 --basepop 10000 --steps 10000 --sampleid pd250> $folder/validation_2_1 &       
 $tool --N 500 --gen 20000 --genome mb:10,10,10,10,10 --cluster mb:1,1,1,1,1 --rr 4,4,4,4,4 --rep 300 --u 0.0 --basepop 10000 --steps 10000 --sampleid pd500> $folder/validation_2_2 &  
@@ -80,31 +80,32 @@ library(patchwork)
 Visualization: comparing the simulations with the prediction
 
 ``` r
-validation<-read.table("Raw/2022_08_01_Validation_2_Drift", fill = TRUE, sep = "\t")
-names(validation)<-c("rep", "gen", "popstat", "fmale", "spacer_1", "fwte", "avw", "avtes", "avpopfreq", "fixed","spacer_2","phase","fwpirna","spacer_3","fwcli","avcli","fixcli","spacer_4","fwpar_yespi","fwpar_nopi","avpar","fixpar","spacer_5","piori","orifreq","spacer 6", "sampleid")
+validation<-read.table("2023_02_14_Validation_2_Drift", fill = TRUE, sep = "\t")
+names(validation)<-c("rep", "gen", "popstat", "spacer_1", "fwte", "avw", "minw","avtes", "avpopfreq", "fixed", "spacer_2", "phase", "fwcli","avcli","fixcli","spacer_4","avbias","3tot", "3cluster", "spacer 5", "sampleid")
 
 data_1 <- validation[which(validation$sampleid == "pd250"),names(validation) %in% c("rep","fixed")]
 gl_1<-ggplot(data_1,aes(x=fixed))+
-      geom_histogram(binwidth = 1)+
-      ylim(0,65)+
-      ggtitle("N = 250")+
-      geom_vline(xintercept=20, lwd=1,lty=2, colour="blue")
+  geom_histogram(binwidth = 1)+
+  ylim(0,65)+
+  ggtitle("N = 250")+
+  geom_vline(xintercept=20, lwd=1,lty=2, colour="blue")
 
 data_2 <- validation[which(validation$sampleid == "pd500"),names(validation) %in% c("rep","fixed")]
 gl_2<-ggplot(data_2,aes(x=fixed))+
-      geom_histogram(binwidth = 1)+
-      ylim(0,65)+
-      ggtitle("N = 500")+
-      geom_vline(xintercept=10, lwd=1,lty=2, colour="blue")
+  geom_histogram(binwidth = 1)+
+  ylim(0,65)+
+  ggtitle("N = 500")+
+  geom_vline(xintercept=10, lwd=1,lty=2, colour="blue")
 
 data_3 <- validation[which(validation$sampleid == "pd1000"),names(validation) %in% c("rep","fixed")]
 gl_3<-ggplot(data_3,aes(x=fixed))+
-      geom_histogram(binwidth = 1)+
-      ylim(0,65)+
-      ggtitle("N = 1000")+
-      geom_vline(xintercept=5, lwd=1,lty=2, colour="blue")
+  geom_histogram(binwidth = 1)+
+  ylim(0,65)+
+  ggtitle("N = 1000")+
+  geom_vline(xintercept=5, lwd=1,lty=2, colour="blue")
 
 gl_1+gl_2+gl_3
+
 ```
 <p align="center">
 <img src="images/2023-02-16-validation2_drift.png" width="400" height="400" alt="Fixed vs. Count">
