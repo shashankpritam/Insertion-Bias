@@ -107,7 +107,7 @@ gl_3<-ggplot(data_3,aes(x=fixed))+
 gl_1+gl_2+gl_3
 ```
 
-![](2022_08_01_Validation_2_Drift_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](images/2023-02-16-validation2_drift.png)<!-- -->
 
 ## Conclusions
 
