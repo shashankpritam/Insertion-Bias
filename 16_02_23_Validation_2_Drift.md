@@ -46,13 +46,13 @@ We used 300 replicates for each simulation.
 
 ## Materials & Methods
 
-version: invadego0.2.1
+version: invadego0.1.3
 
--   seed pd250: 1659361504473361000
+-   seed pd250: 1676090437725514000
 
--   seed pd500: 1659361504473374000
+-   seed pd500: 1676090437725517000
 
--   seed pd1000: 1659361504473280000
+-   seed pd1000: 1676090437725529000
 
 ### Commands for the simulation:
 
