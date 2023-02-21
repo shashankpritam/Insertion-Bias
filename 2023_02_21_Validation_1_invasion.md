@@ -32,7 +32,7 @@ A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
 
 ## Materials & Methods
 
-version: invadego0.1.3 seed:
+version: invadego0.1.3 seed:1677013420283152972
 
 ### Commands for the simulation:
 
