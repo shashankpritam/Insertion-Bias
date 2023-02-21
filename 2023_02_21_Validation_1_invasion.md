@@ -30,6 +30,23 @@ t = 100
 
 A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
 
+## Materials & Methods
+
+version: invadego0.1.3 seed:
+
+### Commands for the simulation:
+
+``` bash
+folder="Simulation-Results/Insertion-Bias/validation_1"
+tool="./main"
+
+$tool --N 1000 --gen 100 --genome mb:1 --cluster kb:0 --rr 4 --rep 500 --u 0.1 --basepop "10(0)" --silent --steps 1 > $folder/2023_02_21_Validation_1_invasion
+```
+
+
+
+### Visualization in R (A)
+
 
       library(ggplot2)
       library(RColorBrewer)
@@ -55,6 +72,7 @@ A. (Left) In this scenario estimated the expected TE copies in the population.
 
 B. (Right) Similar to the previous case but in this scenario estimated the expected TE copies per diploid individual.
 
+### Visualization in R (B)
 
     library(ggplot2)
     library(RColorBrewer)
