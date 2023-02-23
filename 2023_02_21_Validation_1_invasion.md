@@ -81,8 +81,8 @@ B. (Right) Similar to the previous case but in this scenario estimated the expec
     theme_set(theme_bw())
     
     cn<-seq(0,99,1)
-    res<-10*1.1^cn
-    theo<-data.frame(x=1:100,y=res)
+    res<-10*1.1^cn    
+    theo<-data.frame(x=1:100,y=res/1000)
     validation<-read.table("2023_02_05_Validation_1_invasion", fill = TRUE, sep = "\t")
     names(validation)<-c("rep", "gen", "popstat", "spacer_1", "fwte", "avw", "minw","avtes", "avpopfreq", "fixed", "spacer_2", "phase", "fwcli","avcli","fixcli","spacer_4","avbias","3tot", "3cluster")
     
