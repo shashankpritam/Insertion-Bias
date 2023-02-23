@@ -92,7 +92,7 @@ B. (Right) Similar to the previous case but in this scenario estimated the expec
 
 ## Conclusions
 
-<del>The simulation matched the expectations. Invadego accurately reproduces
+The simulation matched the expectations. Invadego accurately reproduces
 the expected exponential increase of TE copy numbers in a population
 with no piRNA clusters.
   
