@@ -18,22 +18,23 @@ Different factors can influence the decay of linkage disequilibrium such
 as inbreeding and recombination rate.
 
 The number of generations needed to reach
-![D=0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;D%3D0 "D=0")
-is described by the following equation:
 
-![D\_{n}=(1-c)^{n}D\_{0}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;D_%7Bn%7D%3D%281-c%29%5E%7Bn%7DD_%7B0%7D "D_{n}=(1-c)^{n}D_{0}")
 
--   ![n](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;n "n")
+###D = 0 is described by the following equation:
+
+###*D<sub>n</sub> = (1 - c)<sup>n</sup>D<sub>0</sub>*
+
+
+-   n
     is the number of generations
 
--   ![D\_{n}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;D_%7Bn%7D "D_{n}")
+-   D<sub>n</sub>
     is the value of the linkage disequilibrium at generation n
 
--   ![D\_{0}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;D_%7B0%7D "D_{0}")
+-   D<sub>0</sub>
     is the initial value of linkage disequilibrium
 
--   ![c](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;c "c")
-    is the recombination rate
+-   c    is the recombination rate
 
 For more informations about the basics of linkage disequilibrium visit:
 [Wikipedia](https://en.wikipedia.org/wiki/Linkage_disequilibrium).
@@ -44,27 +45,27 @@ For all validations, a population of N = 10000 was used and an initial
 TE distribution of 1000. These were simulated for 150 generations.
 
 -   Validation 8_1: Linkage disequilibrium Recombination rate = 0.00
-    seed: 1659961515792170000
+    seed:
 
 -   Validation 8_2: Linkage disequilibrium Recombination rate = 0.01
-    seed: 1659961877961144000
+    seed:
 
 -   Validation 8_3: Linkage disequilibrium Recombination rate = 0.05
-    seed: 1659962257330945000
+    seed:
 
 -   Validation 8_4: Linkage disequilibrium Recombination rate = 0.1
-    seed: 1659962642651211000
+    seed:
 
 ## Materials & Methods
 
-version: invadego 0.2.2
+version: invadego 0.1.3
 
 ### Commands for the simulation:
 
 ``` bash
 echo "R 0;0 999999;" > input_LD
-folder="/Users/ascarpa/Paramutations_TEs/Validation/Raw"
-tool="/Users/ascarpa/invade-invadego/invadego022"
+folder="Simulation-Results/Insertion-Bias/validation_8"
+tool="./main"
 
 
 $tool --N 10000 --u 0 --basepop $folder/input_LD --file-debug $folder/validation_8_1_debug --gen 150 --genome mb:1 --steps 1 --rr 0 --rep 100 > $folder/validation_8_1
