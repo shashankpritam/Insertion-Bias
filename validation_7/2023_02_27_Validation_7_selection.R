@@ -77,19 +77,21 @@ g_2_3<-ggplot()+
 
 g_2_2+g_2_3
 
-df_sel<-read.table("2023_02_27_Validation_7_Selection", fill = TRUE, sep = "\t")
-names(df_sel)<-c("rep", "gen", "popstat", "fmale", "spacer_1", "fwte", "avw", "min_w", "avtes", "avpopfreq",
-                 "fixed","spacer_2", "phase", "fwpirna", "spacer_3", "fwcli", "avcli", "fixcli", "spacer_4",
-                 "fwpar_yespi","fwpar_nopi", "avpar","fixpar","spacer_5","piori","orifreq","spacer 6", "sampleid")
+# df_sel<-read.table("2023_02_27_Validation_7_Selection", fill = TRUE, sep = "\t")
+# names(df_sel)<-c("rep", "gen", "popstat", "fmale", "spacer_1", "fwte", "avw", "min_w", "avtes", "avpopfreq",
+#                  "fixed","spacer_2", "phase", "fwpirna", "spacer_3", "fwcli", "avcli", "fixcli", "spacer_4",
+#                  "fwpar_yespi","fwpar_nopi", "avpar","fixpar","spacer_5","piori","orifreq","spacer 6", "sampleid")
+# 
+# g_sel<-ggplot(df_sel, aes(x=gen, y=avpopfreq , group=rep))+
+#   geom_line(alpha=1,size=0.7)+
+#   ylab("TE population frequency") + xlab("generation")+
+#   facet_wrap(~sampleid, ncol=3)+
+#   facet_wrap(~sampleid, labeller = labeller(sampleid = 
+#                                               c("psel3" = "x = 0",
+#                                                 "psel4" = "x = 0.1",
+#                                                 "psel5" = "x = 0.01",
+#                                                 "psel6" = "x = 0.001",
+#                                                 "psel7" = "x = 0.0001")))
+# plot(g_sel)
 
-g_sel<-ggplot(df_sel, aes(x=gen, y=avpopfreq , group=rep))+
-  geom_line(alpha=1,size=0.7)+
-  ylab("TE population frequency") + xlab("generation")+
-  facet_wrap(~sampleid, ncol=3)+
-  facet_wrap(~sampleid, labeller = labeller(sampleid = 
-                                              c("psel3" = "x = 0",
-                                                "psel4" = "x = 0.1",
-                                                "psel5" = "x = 0.01",
-                                                "psel6" = "x = 0.001",
-                                                "psel7" = "x = 0.0001")))
-plot(g_sel)
+
