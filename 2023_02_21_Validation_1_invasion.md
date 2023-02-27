@@ -27,7 +27,6 @@ $\mu$  = 0.1
 t = 100
 
 
-
 A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
 
 ## Materials & Methods
@@ -95,5 +94,3 @@ B. (Right) Similar to the previous case but in this scenario estimated the expec
 The simulation matched the expectations. Invadego accurately reproduces
 the expected exponential increase of TE copy numbers in a population
 with no piRNA clusters.
-  
- 
