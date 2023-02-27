@@ -2,8 +2,7 @@ library(ggplot2)
 library(dplyr)
 
 validation<-read.table("2023_02_27_Validation_5_trigger_loci", fill = TRUE, sep = "\t")
-names(validation)<-c("rep", "gen", "popstat", "fmale", "spacer_1", "fwte", "avw", "avtes", "avpopfreq", "fixed","spacer_2","phase","fwpirna","spacer_3","fwcli","avcli","fixcli","spacer_4","fwpar_yespi","fwpar_nopi",
-                     "avpar","fixpar","spacer_5","piori","orifreq","spacer 6", "sampleid")
+names(validation)<-c("rep", "gen", "popstat", "spacer_1", "minw", "fwte", "avw", "avtes", "avpopfreq", "fixed","spacer_2","phase","fwcli","avcli","fixcli","spacer_3","avbias","3tot", "3cluster", "spacer 4", "sampleid")
 
 
 data_new <- validation
