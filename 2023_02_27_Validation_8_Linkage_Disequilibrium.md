@@ -20,9 +20,9 @@ as inbreeding and recombination rate.
 The number of generations needed to reach
 
 
-###D = 0 is described by the following equation:
+### D = 0 is described by the following equation:
 
-###*D<sub>n</sub> = (1 - c)<sup>n</sup>D<sub>0</sub>*
+### *D<sub>n</sub> = (1 - c)<sup>n</sup>D<sub>0</sub>*
 
 
 -   n
@@ -124,7 +124,47 @@ This plot shows how linkage disequilibrium decays with different
 recombination rates.
 
 ``` r
-t_8_1<-read.table("validation_8_1_debug", fill = TRUE, sep = "\t")names(t_8_1)<-c("rep", "gen", "D")g_8_1<-ggplot()+  geom_line(data = t_8_1, aes(x = gen, y = D, group = rep), color = "grey")+  geom_line(data = df, aes(x = gen, y = Dnc_0.00), color = "blue")+  xlab("generation")+ylab("D")+  ggtitle("c = 0")+  ylim(0, 0.25)t_8_2<-read.table("validation_8_2_debug", fill = TRUE, sep = "\t")names(t_8_2)<-c("rep", "gen", "D")g_8_2<-ggplot()+  geom_line(data = t_8_2, aes(x = gen, y = D, group = rep), color = "grey")+  geom_line(data = df, aes(x = gen, y = Dnc_0.01), color = "green")+  xlab("generation")+ylab("D")+  ggtitle("c = 0.01")+  ylim(-0.01, 0.25)t_8_3<-read.table("validation_8_3_debug", fill = TRUE, sep = "\t")names(t_8_3)<-c("rep", "gen", "D")g_8_3<-ggplot()+  geom_line(data = t_8_3, aes(x = gen, y = D, group = rep), color = "grey")+  geom_line(data = df, aes(x = gen, y = Dnc_0.05), color = "yellow")+  xlab("generation")+ylab("D")+  ggtitle("c = 0.05")+  ylim(-0.01, 0.25)t_8_4<-read.table("validation_8_4_debug", fill = TRUE, sep = "\t")names(t_8_4)<-c("rep", "gen", "D")g_8_4<-ggplot()+  geom_line(data = t_8_4, aes(x = gen, y = D, group = rep), color = "grey")+  geom_line(data = df, aes(x = gen, y = Dnc_0.1), color = "orange")+  xlab("generation")+ylab("D")+  ggtitle("c = 0.1")+  ylim(-0.01, 0.25)(g_8_1+g_8_2)/  (g_8_3+g_8_4)
+t_8_1<-read.table("validation_8_1_debug", fill = TRUE, sep = "\t")
+names(t_8_1)<-c("rep", "gen", "D")
+g_8_1<-ggplot()+
+  geom_line(data = t_8_1, aes(x = gen, y = D, group = rep), color = "grey")+
+  geom_line(data = df, aes(x = gen, y = Dnc_0.00), color = "blue")+
+  xlab("generation")+ylab("D")+
+  ggtitle("c = 0")+
+  ylim(0, 0.25)
+
+
+t_8_2<-read.table("validation_8_2_debug", fill = TRUE, sep = "\t")
+names(t_8_2)<-c("rep", "gen", "D")
+g_8_2<-ggplot()+
+  geom_line(data = t_8_2, aes(x = gen, y = D, group = rep), color = "grey")+
+  geom_line(data = df, aes(x = gen, y = Dnc_0.01), color = "green")+
+  xlab("generation")+ylab("D")+
+  ggtitle("c = 0.01")+
+  ylim(-0.01, 0.25)
+
+
+t_8_3<-read.table("validation_8_3_debug", fill = TRUE, sep = "\t")
+names(t_8_3)<-c("rep", "gen", "D")
+g_8_3<-ggplot()+
+  geom_line(data = t_8_3, aes(x = gen, y = D, group = rep), color = "grey")+
+  geom_line(data = df, aes(x = gen, y = Dnc_0.05), color = "yellow")+
+  xlab("generation")+ylab("D")+
+  ggtitle("c = 0.05")+
+  ylim(-0.01, 0.25)
+
+
+t_8_4<-read.table("validation_8_4_debug", fill = TRUE, sep = "\t")
+names(t_8_4)<-c("rep", "gen", "D")
+g_8_4<-ggplot()+
+  geom_line(data = t_8_4, aes(x = gen, y = D, group = rep), color = "grey")+
+  geom_line(data = df, aes(x = gen, y = Dnc_0.1), color = "orange")+
+  xlab("generation")+ylab("D")+
+  ggtitle("c = 0.1")+
+  ylim(-0.01, 0.25)
+
+(g_8_1+g_8_2)/
+  (g_8_3+g_8_4)
 ```
 
 <img src="images/2023_02_27_Validation_8_Linkage_Disequilibrium_b.png" alt="8B.">
