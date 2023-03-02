@@ -29,7 +29,7 @@ gl<-ggplot(df, aes( x = gen))+
   ylab("D Linkage disequilibrium")+xlab("generation")
 plot(gl)
 
-t_8_1<-read.table("Raw/validation_8_1_debug", fill = TRUE, sep = "\t")
+t_8_1<-read.table("validation_8_1_debug", fill = TRUE, sep = "\t")
 names(t_8_1)<-c("rep", "gen", "D")
 g_8_1<-ggplot()+
   geom_line(data = t_8_1, aes(x = gen, y = D, group = rep), color = "grey")+
@@ -39,7 +39,7 @@ g_8_1<-ggplot()+
   ylim(0, 0.25)
 
 
-t_8_2<-read.table("Raw/validation_8_2_debug", fill = TRUE, sep = "\t")
+t_8_2<-read.table("validation_8_2_debug", fill = TRUE, sep = "\t")
 names(t_8_2)<-c("rep", "gen", "D")
 g_8_2<-ggplot()+
   geom_line(data = t_8_2, aes(x = gen, y = D, group = rep), color = "grey")+
@@ -49,7 +49,7 @@ g_8_2<-ggplot()+
   ylim(-0.01, 0.25)
 
 
-t_8_3<-read.table("Raw/validation_8_3_debug", fill = TRUE, sep = "\t")
+t_8_3<-read.table("validation_8_3_debug", fill = TRUE, sep = "\t")
 names(t_8_3)<-c("rep", "gen", "D")
 g_8_3<-ggplot()+
   geom_line(data = t_8_3, aes(x = gen, y = D, group = rep), color = "grey")+
@@ -59,7 +59,7 @@ g_8_3<-ggplot()+
   ylim(-0.01, 0.25)
 
 
-t_8_4<-read.table("Raw/validation_8_4_debug", fill = TRUE, sep = "\t")
+t_8_4<-read.table("validation_8_4_debug", fill = TRUE, sep = "\t")
 names(t_8_4)<-c("rep", "gen", "D")
 g_8_4<-ggplot()+
   geom_line(data = t_8_4, aes(x = gen, y = D, group = rep), color = "grey")+
