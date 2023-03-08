@@ -8,21 +8,21 @@ names(validation)<-c("rep", "gen", "popstat", "spacer_1", "fwte", "avw", "minw",
 data_1 <- validation[which(validation$sampleid == "pd250"),names(validation) %in% c("rep","fixed")]
 gl_1<-ggplot(data_1,aes(x=fixed))+
   geom_histogram(binwidth = 1)+
-  ylim(0,65)+
+#  ylim(0,65)+
   ggtitle("N = 250")+
   geom_vline(xintercept=20, lwd=1,lty=2, colour="blue")
 
 data_2 <- validation[which(validation$sampleid == "pd500"),names(validation) %in% c("rep","fixed")]
 gl_2<-ggplot(data_2,aes(x=fixed))+
   geom_histogram(binwidth = 1)+
-  ylim(0,65)+
+#  ylim(0,65)+
   ggtitle("N = 500")+
   geom_vline(xintercept=10, lwd=1,lty=2, colour="blue")
 
 data_3 <- validation[which(validation$sampleid == "pd1000"),names(validation) %in% c("rep","fixed")]
 gl_3<-ggplot(data_3,aes(x=fixed))+
   geom_histogram(binwidth = 1)+
-  ylim(0,65)+
+#  ylim(0,65)+
   ggtitle("N = 1000")+
   geom_vline(xintercept=5, lwd=1,lty=2, colour="blue")
 
