@@ -167,7 +167,7 @@ g_8_4<-ggplot()+
   (g_8_3+g_8_4)
 ```
 
-<img src="images/2023_02_27_Validation_8_Linkage_Disequilibrium_b.png" alt="8B.">
+<img src="images/2023_03_08_Validation_8_Linkage_Disequilibrium.png" alt="8B.">
 
 In the 4 graphs above the theoretical value is described by the colored
 line, while the grey lines represent the 100 simulated populations for
