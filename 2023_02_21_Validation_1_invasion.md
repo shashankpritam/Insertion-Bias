@@ -1,6 +1,6 @@
 Validation of invasion
 ================
-Almorò Scarpa (Edited by Shashank [from](https://github.com/Almo96/Paramutations_TEs/blob/main/Validation/2022_08_01_Validation_1_invasion.md))
+Almorò Scarpa
 
 ## Introduction
 

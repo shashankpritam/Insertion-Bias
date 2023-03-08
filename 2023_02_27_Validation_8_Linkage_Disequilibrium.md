@@ -45,16 +45,16 @@ For all validations, a population of N = 10000 was used and an initial
 TE distribution of 1000. These were simulated for 150 generations.
 
 -   Validation 8_1: Linkage disequilibrium Recombination rate = 0.00
-    seed:
+    seed:1678298900411384477
 
 -   Validation 8_2: Linkage disequilibrium Recombination rate = 0.01
-    seed:
+    seed:1678299623759727104
 
 -   Validation 8_3: Linkage disequilibrium Recombination rate = 0.05
-    seed:
+    seed:1678300302211346167
 
 -   Validation 8_4: Linkage disequilibrium Recombination rate = 0.1
-    seed:
+    seed:1678300960683806049
 
 ## Materials & Methods
 
@@ -63,18 +63,18 @@ version: invadego 0.1.3
 ### Commands for the simulation:
 
 ``` bash
-echo "R 0;0 999999;" > input_LD
+
 folder="Simulation-Results/Insertion-Bias/validation_8"
 tool="./main"
 
+$tool --N 10000 --u 0 --basepop "100(0)" --file-debug $folder/validation_8_1_debug --gen 150 --genome mb:1 --steps 1 --rr 0 --rep 100 > $folder/validation_8_1
 
-$tool --N 10000 --u 0 --basepop $folder/input_LD --file-debug $folder/validation_8_1_debug --gen 150 --genome mb:1 --steps 1 --rr 0 --rep 100 > $folder/validation_8_1
+$tool --N 10000 --u 0 --basepop "100(0)" --file-debug $folder/validation_8_2_debug --gen 150 --genome mb:1 --steps 1 --rr 1 --rep 100 > $folder/validation_8_2
 
-$tool --N 10000 --u 0 --basepop $folder/input_LD --file-debug $folder/validation_8_2_debug --gen 150 --genome mb:1 --steps 1 --rr 1 --rep 100 > $folder/validation_8_2
+$tool --N 10000 --u 0 --basepop "100(0)" --file-debug $folder/validation_8_3_debug --gen 150 --genome mb:1 --steps 1 --rr 5 --rep 100 > $folder/validation_8_3
 
-$tool --N 10000 --u 0 --basepop $folder/input_LD --file-debug $folder/validation_8_3_debug --gen 150 --genome mb:1 --steps 1 --rr 5 --rep 100 > $folder/validation_8_3
+$tool --N 10000 --u 0 --basepop "100(0)" --file-debug $folder/validation_8_4_debug --gen 150 --genome mb:1 --steps 1 --rr 10 --rep 100 > $folder/validation_8_4
 
-$tool --N 10000 --u 0 --basepop $folder/input_LD --file-debug $folder/validation_8_4_debug --gen 150 --genome mb:1 --steps 1 --rr 10 --rep 100 > $folder/validation_8_4
 ```
 
 ### Visualization in R
