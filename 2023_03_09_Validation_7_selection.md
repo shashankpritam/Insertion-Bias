@@ -11,23 +11,23 @@ To do so we tested different scenarios:
 
 ### Selection on all TEs vs selection on non-cluster TEs
 
--   selection on all TEs, seed: 1677537514665119163
+-   selection on all TEs, seed: 1678299205619393372
 
--   selection only on non-cluster TEs, seed: 1677537534906042603
+-   selection only on non-cluster TEs, seed: 1678299226767400725
 
 ### Different selection coefficients on the same population:
 
 x is the selection coefficient.
 
--   x = 0, seed: 1677537565673794144
+-   x = 0, seed: 1678299259243487257
 
--   x = 0.1, seed: 1677537565686520711
+-   x = 0.1, seed: 1678303973006171367
 
--   x = 0.01, seed: 1677537565696105375
+-   x = 0.01, seed: 1678304219328409617
 
--   x = 0.001, seed: 1677537565704862803
+-   x = 0.001, seed: 1678305748132586398
 
--   x = 0.0001, seed: 1677537565713894188
+-   x = 0.0001, seed: 1678310264606365743
 
 ## Materials & Methods
 
@@ -36,27 +36,22 @@ version: invadego 0.1.3
 ### Commands for the simulation:
 
 ``` bash
-echo "5000 R 0;0;
-2500 R 0;0;0
-2500 R 0;;" > input_sel
-folder="Simulation-Results/Insertion-Bias/validation_7"
-tool="./main"
-
 $tool --N 1000 --gen 100 --genome mb:1 --cluster kb:100 --rr 4 --rep 100 --u 0.1 --basepop "100(0)" --steps 25 -x 0.1 --file-mhp $folder/validation_7_1_mhp> $folder/validation_7_1
 
 $tool --N 1000 --gen 100 --genome mb:1 --cluster kb:100 --rr 4 --rep 100 --u 0.1 --basepop "100(0)" --steps 25 -x 0.1 -no-x-cluins --file-mhp $folder/validation_7_2_mhp> $folder/validation_7_2
 
-$tool --N 10000 --u 0 --basepop $folder/input_sel --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel3 > $folder/validation_7_3
+$tool --N 10000 --u 0 --basepop "1000(0)" --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel3 > $folder/validation_7_3
 
-$tool --N 10000 --u 0 -x 0.1 --basepop $folder/input_sel --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel4 > $folder/validation_7_4
+$tool --N 10000 --u 0 -x 0.1 --basepop "1000(0)" --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel4 > $folder/validation_7_4
 
-$tool --N 10000 --u 0 -x 0.01 --basepop $folder/input_sel --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel5 > $folder/validation_7_5
+$tool --N 10000 --u 0 -x 0.01 --basepop "1000(0)" --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel5 > $folder/validation_7_5
 
-$tool --N 10000 --u 0 -x 0.001 --basepop $folder/input_sel --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel6 > $folder/validation_7_6
+$tool --N 10000 --u 0 -x 0.001 --basepop "1000(0)" --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel6 > $folder/validation_7_6
 
-$tool --N 10000 --u 0 -x 0.0001 --basepop $folder/input_sel --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel7 > $folder/validation_7_7
+$tool --N 10000 --u 0 -x 0.0001 --basepop "1000(0)" --gen 1000 --genome mb:1 --steps 10 --rr 0 --rep 100 --sampleid psel7 > $folder/validation_7_7
 
-cat validation_7_3 validation_7_4 validation_7_5 validation_7_6 validation_7_7 |grep -v "^Invade"|grep -v "^#" > 2023_02_27_Validation_7_Selection
+cat validation_7_3 validation_7_4 validation_7_5 validation_7_6 validation_7_7 |grep -v "^Invade"|grep -v "^#" > 2023_03_09_Validation_7_Selection
+
 ```
 
 ### Visualization in R
@@ -64,11 +59,7 @@ cat validation_7_3 validation_7_4 validation_7_5 validation_7_6 validation_7_7 |
 Setting the environment
 
 ``` r
-library(ggplot2)
-library(RColorBrewer)
-library(plyr)
-library(patchwork)
-library(ggpubr)
+library(ggplot2)library(RColorBrewer)library(plyr)library(patchwork)library(ggpubr)
 ```
 
 # Selection vs selection on non-cluster insertions
@@ -86,7 +77,7 @@ g_1<-ggplot(data=t_1,aes(x=pos, fill=locus))+geom_histogram(binwidth=10000)+face
 plot(g_1)
 ```
 
-<img src="images/2023_02_27_Validation_7_selection_7a.png" alt="7A.">
+<img src="images/2023_03_09_Validation_7_selection_7a.png" alt="7A.">
 
 ``` r
 t_1_2<-read.table("validation_7_1_mhp", fill = TRUE, sep = "\t")
@@ -114,7 +105,7 @@ g_1_3<-ggplot()+
 g_1_2+g_1_3
 ```
 
-<img src="images/2023_02_27_Validation_7_selection_7b.png" alt="7B.">
+<img src="images/2023_03_09_Validation_7_selection_7b.png" alt="7B.">
 
 ``` r
 t_2<-read.table("validation_7_2_mhp", fill = TRUE, sep = "\t")
@@ -129,7 +120,7 @@ g_2<-ggplot(data=t_2,aes(x=pos, fill=locus))+geom_histogram(binwidth=10000)+face
 plot(g_2)
 ```
 
-<img src="images/2023_02_27_Validation_7_selection_7c.png" alt="7C.">
+<img src="images/2023_03_09_Validation_7_selection_7c.png" alt="7C.">
 
 ``` r
 t_2_2<-read.table("validation_7_2_mhp", fill = TRUE, sep = "\t")
@@ -157,7 +148,7 @@ g_2_3<-ggplot()+
 g_2_2+g_2_3
 ```
 
-<img src="images/2023_02_27_Validation_7_selection_7d.png" alt="7D.">
+<img src="images/2023_03_09_Validation_7_selection_7d.png" alt="7D.">
 
 Selection can act on all TEs insertion, as in the first case or only in
 non-cluster TEs insertions in the latter. The reason being is that
@@ -168,28 +159,13 @@ to be lost, while in the second only non cluster TEs are lost, while
 cluster insertions are maintained.
 
 ``` r
-<!--df_sel<-read.table("2023_02_27_Validation_7_Selection", fill = TRUE, sep = "\t")
-names(df_sel)<-c("rep", "gen", "popstat", "fmale", "spacer_1", "fwte", "avw", "min_w", "avtes", "avpopfreq",
-                 "fixed","spacer_2", "phase", "fwpirna", "spacer_3", "fwcli", "avcli", "fixcli", "spacer_4",
-                 "fwpar_yespi","fwpar_nopi", "avpar","fixpar","spacer_5","piori","orifreq","spacer 6", "sampleid")
-
-g_sel<-ggplot(df_sel, aes(x=gen, y=avpopfreq , group=rep))+
-  geom_line(alpha=1,size=0.7)+
-  ylab("TE population frequency") + xlab("generation")+
-  facet_wrap(~sampleid, ncol=3)+
-  facet_wrap(~sampleid, labeller = labeller(sampleid = 
-                                              c("psel3" = "x = 0",
-                                                "psel4" = "x = 0.1",
-                                                "psel5" = "x = 0.01",
-                                                "psel6" = "x = 0.001",
-                                                "psel7" = "x = 0.0001")))
-plot(g_sel)-->
+df_sel<-read.table("2023_03_09_Validation_7_Selection", fill = TRUE, sep = "\t")names(df_sel)<-c("rep", "gen", "popstat", "spacer_1", "fwte", "avw", "min_w", "avtes", "avpopfreq",                 "fixed","spacer_2", "phase", "fwcli", "avcli", "fixcli", "spacer_3",                 "avbias",	"3tot",	"3cluster",	"spacer 4", "sampleid")g_sel<-ggplot(df_sel, aes(x=gen, y=avpopfreq , group=rep))+  geom_line(alpha=1,size=0.7)+  ylab("TE population frequency") + xlab("generation")+  facet_wrap(~sampleid, ncol=3)+  facet_wrap(~sampleid, labeller = labeller(sampleid =                                              c("psel3" = "x = 0",                                                "psel4" = "x = 0.1",                                                "psel5" = "x = 0.01",                                                "psel6" = "x = 0.001",                                                "psel7" = "x = 0.0001")))plot(g_sel)
 ```
-> The new version of Invadego has no paramutation and trigger parameters
-> 
-> Insert Image
 
-<!--``` r
+<img src="images/2023_03_09_Validation_7_selection_7e.png" alt="7E.">
+
+
+``` r
 df3_s<-subset(df_sel, sampleid=="psel3")
 
 p0=0.5
@@ -223,13 +199,11 @@ g_s_3<-ggplot()+
   labs(x="generation", y="frequency of TEs in the population")
 
 plot(g_s_3)
-```-->
+```
 
-> The new version of Invadego has no paramutation and trigger parameters
-> 
-> Insert Image
+<img src="images/2023_03_09_Validation_7_selection_7f.png" alt="7F.">
 
-<!--``` r
+``` r
 df4_s<-subset(df_sel, sampleid=="psel4")
 
 p0=0.5
@@ -263,12 +237,10 @@ g_s_4<-ggplot()+
 
 plot(g_s_4)
 ```
--->
-> The new version of Invadego has no paramutation and trigger parameters
-> 
-> Insert Image
 
-<!--``` r
+<img src="images/2023_03_09_Validation_7_selection_7g.png" alt="7G.">
+
+``` r
 df5_s<-subset(df_sel, sampleid=="psel5")
 
 p0=0.5
@@ -302,13 +274,11 @@ g_s_5<-ggplot()+
   labs(x="generation", y="frequency of TEs in the population")
 
 plot(g_s_5)
-```-->
+```
 
-> The new version of Invadego has no paramutation and trigger parameters
-> 
-> Insert Image
+<img src="images/2023_03_09_Validation_7_selection_7h.png" alt="7H.">
 
-<!--``` r
+``` r
 df6_s<-subset(df_sel, sampleid=="psel6")
 
 p0=0.5
@@ -341,13 +311,11 @@ g_s_6<-ggplot()+
   labs(x="generation", y="frequency of TEs in the population")
 
 plot(g_s_6)
-```-->
+```
 
-> The new version of Invadego has no paramutation and trigger parameters
-> 
-> Insert Image
+<img src="images/2023_03_09_Validation_7_selection_7i.png" alt="7I.">
 
-<!--``` r
+``` r
 df7_s<-subset(df_sel, sampleid=="psel7")
 
 p0=0.5
@@ -380,18 +348,18 @@ g_s_7<-ggplot()+
   labs(x="generation", y="frequency of TEs in the population")
 
 plot(g_s_7)
-```-->
+```
 
+<img src="images/2023_03_09_Validation_7_selection_7j.png" alt="7J.">
 
-<!--
 ``` r
 ggarrange(g_s_3, g_s_7, g_s_6, g_s_5, g_s_4,
           ncol = 3, nrow = 2, align = ("v"),
           labels = c("A", "B", "C", "D", "E"), heights = c(2,2), widths = c(2,2)
 )
-```-->
+```
 
-
+<img src="images/2023_03_09_Validation_7_selection_7k.png" alt="7K.">
 
 The simulations match the expected values (blue line).
 
